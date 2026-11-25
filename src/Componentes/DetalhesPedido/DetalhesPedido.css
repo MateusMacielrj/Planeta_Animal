@@ -1,0 +1,235 @@
+
+/* =========================================
+   DETALHES DO PEDIDO
+========================================= */
+
+.detalhes-pedido {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+
+  background-color: #f4f6f7;
+  color: #1f2428;
+}
+
+.detalhes-pedido > h1 {
+  margin: 0 0 25px;
+  font-size: 28px;
+}
+
+
+/* =========================================
+   INFORMAÇÕES DO PEDIDO
+========================================= */
+
+.informacoes-pedido {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 24px;
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.informacoes-pedido h2 {
+  margin: 0 0 20px;
+  font-size: 18px;
+}
+
+.informacoes-pedido p {
+  margin: 12px 0;
+  color: #5f666b;
+  font-size: 14px;
+}
+
+.informacoes-pedido strong {
+  color: #1f2428;
+}
+
+
+/* =========================================
+   DADOS DO CLIENTE
+========================================= */
+
+.dados-cliente {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 24px;
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.dados-cliente h2 {
+  margin: 0 0 20px;
+  font-size: 18px;
+}
+
+.dados-cliente p {
+  margin: 12px 0;
+  color: #5f666b;
+  font-size: 14px;
+}
+
+.dados-cliente strong {
+  color: #1f2428;
+}
+
+
+/* =========================================
+   PRODUTOS DO PEDIDO
+========================================= */
+
+.produtos-pedido {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 24px;
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.produtos-pedido h2 {
+  margin: 0 0 20px;
+  font-size: 18px;
+}
+
+
+/* PRODUTO INDIVIDUAL */
+
+.produto-detalhe {
+  padding: 20px;
+  margin-bottom: 15px;
+
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+
+  background-color: #ffffff;
+}
+
+.produto-detalhe:last-child {
+  margin-bottom: 0;
+}
+
+.produto-detalhe h3 {
+  margin: 0 0 15px;
+  font-size: 16px;
+  color: #1f2428;
+}
+
+.produto-detalhe p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #5f666b;
+}
+
+.produto-detalhe strong {
+  color: #1f2428;
+}
+
+
+/* =========================================
+   TOTAL DO PEDIDO
+========================================= */
+
+.total-pedido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 24px;
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+  border-radius: 10px;
+
+  border-left: 4px solid #78c342;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.total-pedido h2 {
+  margin: 0;
+  color: #78c342;
+  font-size: 24px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .detalhes-pedido {
+    padding: 25px;
+  }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 700px) {
+  .detalhes-pedido {
+    padding: 20px 15px;
+  }
+
+  .detalhes-pedido > h1 {
+    font-size: 24px;
+  }
+
+  .informacoes-pedido,
+  .dados-cliente,
+  .produtos-pedido,
+  .total-pedido {
+    padding: 20px;
+  }
+
+  .produto-detalhe {
+    padding: 16px;
+  }
+
+  .total-pedido h2 {
+    font-size: 21px;
+  }
+}
+
+
+/* =========================================
+   CELULAR PEQUENO
+========================================= */
+
+@media (max-width: 450px) {
+  .detalhes-pedido {
+    padding: 15px 10px;
+  }
+
+  .informacoes-pedido,
+  .dados-cliente,
+  .produtos-pedido,
+  .total-pedido {
+    padding: 16px;
+  }
+
+  .detalhes-pedido > h1 {
+    font-size: 22px;
+  }
+
+  .total-pedido {
+    align-items: flex-start;
+  }
+
+  .total-pedido h2 {
+    font-size: 19px;
+  }
+}

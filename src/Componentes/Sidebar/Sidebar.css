@@ -1,0 +1,228 @@
+
+/* =========================================
+   SIDEBAR — PLANETA ANIMAL
+========================================= */
+
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  min-height: 100vh;
+  padding: 24px 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #1f2428;
+  color: #ffffff;
+
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =========================================
+   IDENTIDADE DA LOJA
+========================================= */
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-logo {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+
+  object-fit: contain;
+}
+
+.sidebar-header h1 {
+  margin: 0;
+
+  color: #78c342;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* =========================================
+   MENU DE NAVEGAÇÃO
+========================================= */
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  margin: 24px 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.sidebar-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Links do menu */
+
+.sidebar-menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 14px;
+
+  border-radius: 8px;
+
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+
+  box-sizing: border-box;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Efeito ao passar o mouse */
+
+.sidebar-menu a:hover {
+  background-color: #2e7d32;
+  color: #ffffff;
+}
+
+/* Página atual */
+
+.sidebar-menu a.active {
+  background-color: #78c342;
+  color: #172116;
+  font-weight: 700;
+}
+
+/* Foco para navegação pelo teclado */
+
+.sidebar-menu a:focus-visible {
+  outline: 2px solid #78c342;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   RODAPÉ DA SIDEBAR
+========================================= */
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 24px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  color: #9ca3af;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .sidebar {
+    width: 220px;
+    min-width: 220px;
+    padding: 20px 16px;
+  }
+
+  .sidebar-header {
+    gap: 8px;
+  }
+
+  .sidebar-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .sidebar-header h1 {
+    font-size: 17px;
+  }
+
+  .sidebar-menu a {
+    gap: 9px;
+    padding: 11px 10px;
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   SMARTPHONE
+========================================= */
+
+@media (max-width: 767px) {
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+
+    padding: 16px;
+
+    position: relative;
+  }
+
+  .sidebar-header {
+    justify-content: center;
+    gap: 10px;
+
+    padding-bottom: 16px;
+  }
+
+  .sidebar-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .sidebar-header h1 {
+    font-size: 18px;
+  }
+
+  .sidebar-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+
+    margin-top: 16px;
+  }
+
+  .sidebar-menu a {
+    width: auto;
+    min-height: 40px;
+    padding: 10px 12px;
+
+    font-size: 13px;
+  }
+
+  .sidebar-footer {
+    margin-top: 16px;
+    padding-top: 12px;
+  }
+}
+
+/* =========================================
+   ACESSIBILIDADE
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-menu a {
+    transition: none;
+  }
+}

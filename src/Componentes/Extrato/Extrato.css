@@ -1,0 +1,492 @@
+/* =========================================
+   EXTRATO
+========================================= */
+
+.extrato {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  background-color: #f4f6f7;
+  color: #1f2428;
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.extrato-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  margin-bottom: 25px;
+}
+
+.extrato-header h1 {
+  margin: 0 0 6px;
+
+  font-size: 28px;
+}
+
+.extrato-header p {
+  margin: 0;
+
+  color: #6b7277;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   RESUMO FINANCEIRO
+========================================= */
+
+.resumo-extrato {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  margin-bottom: 25px;
+}
+
+.resumo-card {
+  padding: 22px;
+
+  background-color: #ffffff;
+
+  border-radius: 10px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.resumo-card span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #6b7277;
+
+  font-size: 13px;
+}
+
+.resumo-card strong {
+  display: block;
+
+  font-size: 24px;
+}
+
+
+/* SALDO */
+
+.saldo-atual {
+  border-left: 4px solid #1f2428;
+}
+
+.saldo-atual strong {
+  color: #1f2428;
+}
+
+
+/* ENTRADAS */
+
+.total-entradas {
+  border-left: 4px solid #78c342;
+}
+
+.total-entradas strong {
+  color: #78c342;
+}
+
+
+/* SAÍDAS */
+
+.total-saidas {
+  border-left: 4px solid #d9534f;
+}
+
+.total-saidas strong {
+  color: #d9534f;
+}
+
+
+/* =========================================
+   FILTROS
+========================================= */
+
+.filtros-extrato {
+  display: grid;
+
+  grid-template-columns: 1.5fr 1fr 1fr auto;
+
+  align-items: end;
+
+  gap: 20px;
+
+  margin-bottom: 25px;
+
+  padding: 20px;
+
+  background-color: #ffffff;
+
+  border-radius: 10px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.campo-extrato {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.campo-extrato label {
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.campo-extrato input,
+.campo-extrato select {
+  width: 100%;
+
+  height: 42px;
+
+  padding: 0 12px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d9dddf;
+
+  border-radius: 6px;
+
+  background-color: #ffffff;
+
+  color: #1f2428;
+
+  outline: none;
+}
+
+.campo-extrato input:focus,
+.campo-extrato select:focus {
+  border-color: #78c342;
+}
+
+
+/* =========================================
+   BOTÃO FILTRAR
+========================================= */
+
+.botao-filtrar {
+  height: 42px;
+
+  padding: 0 20px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background-color: #78c342;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.botao-filtrar:hover {
+  background-color: #66ad35;
+}
+
+
+/* =========================================
+   LISTA DE MOVIMENTAÇÕES
+========================================= */
+
+.lista-extrato {
+  width: 100%;
+
+  overflow: hidden;
+
+  background-color: #ffffff;
+
+  border-radius: 10px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.lista-extrato-header {
+  padding: 20px;
+
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.lista-extrato-header h2 {
+  margin: 0;
+
+  font-size: 18px;
+}
+
+
+/* =========================================
+   LINHAS
+========================================= */
+
+.movimentacao-linha {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    2fr
+    1fr
+    1.2fr
+    1.2fr;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 18px 20px;
+
+  border-bottom: 1px solid #e8e8e8;
+
+  transition: background-color 0.2s ease;
+}
+
+.movimentacao-linha:last-child {
+  border-bottom: none;
+}
+
+.movimentacao-linha:hover {
+  background-color: #f8faf9;
+}
+
+.movimentacao-linha span {
+  color: #6b7277;
+
+  font-size: 13px;
+}
+
+.movimentacao-linha strong {
+  color: #1f2428;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   CABEÇALHO DA LISTA
+========================================= */
+
+.movimentacao-cabecalho {
+  background-color: #fafafa;
+
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.movimentacao-cabecalho:hover {
+  background-color: #fafafa;
+}
+
+.movimentacao-cabecalho span {
+  color: #6b7277;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   TIPOS DE MOVIMENTAÇÃO
+========================================= */
+
+.movimentacao-entrada {
+  color: #78c342 !important;
+
+  font-weight: 600;
+}
+
+.movimentacao-saida {
+  color: #d9534f !important;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   VALORES
+========================================= */
+
+.valor-entrada {
+  color: #78c342 !important;
+
+  text-align: right;
+}
+
+.valor-saida {
+  color: #d9534f !important;
+
+  text-align: right;
+}
+
+
+/* =========================================
+   SALDO DO PERÍODO
+========================================= */
+
+.saldo-periodo {
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 20px;
+
+  padding: 20px;
+
+  background-color: #ffffff;
+
+  border-radius: 10px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.saldo-periodo span {
+  color: #6b7277;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.saldo-periodo strong {
+  color: #78c342;
+
+  font-size: 20px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .extrato {
+    padding: 25px;
+  }
+
+  .resumo-extrato {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .saldo-atual {
+    grid-column: 1 / -1;
+  }
+
+  .filtros-extrato {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .botao-filtrar {
+    width: 100%;
+  }
+
+  .movimentacao-linha {
+    grid-template-columns:
+      1fr
+      2fr
+      1fr
+      1fr
+      1.2fr;
+  }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 700px) {
+
+  .extrato {
+    padding: 20px 15px;
+  }
+
+  .extrato-header h1 {
+    font-size: 24px;
+  }
+
+  .resumo-extrato {
+    grid-template-columns: 1fr;
+  }
+
+  .saldo-atual {
+    grid-column: auto;
+  }
+
+  .filtros-extrato {
+    grid-template-columns: 1fr;
+  }
+
+  .lista-extrato {
+    overflow-x: auto;
+  }
+
+  .movimentacao-linha {
+    min-width: 700px;
+  }
+
+  .saldo-periodo {
+    justify-content: space-between;
+  }
+}
+
+
+/* =========================================
+   CELULAR PEQUENO
+========================================= */
+
+@media (max-width: 450px) {
+
+  .extrato {
+    padding: 15px 10px;
+  }
+
+  .resumo-card {
+    padding: 18px;
+  }
+
+  .resumo-card strong {
+    font-size: 21px;
+  }
+
+  .lista-extrato-header {
+    padding: 16px;
+  }
+
+  .saldo-periodo {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+}

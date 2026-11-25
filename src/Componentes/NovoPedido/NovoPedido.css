@@ -1,0 +1,340 @@
+
+/* =========================
+   PÁGINA NOVO PEDIDO
+========================= */
+
+.novo-pedido {
+  min-height: 100vh;
+  padding: 32px;
+  background-color: #f4f7f5;
+  color: #111827;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.novo-pedido *,
+.novo-pedido *::before,
+.novo-pedido *::after {
+  box-sizing: border-box;
+}
+
+/* TÍTULO PRINCIPAL */
+
+.novo-pedido > h1 {
+  margin: 0 0 28px;
+  color: #1f2428;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.novo-pedido .card {
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 26px;
+  background-color: #ffffff;
+  border: 1px solid #e4e8e5;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(31, 36, 40, 0.04);
+}
+
+/* TÍTULOS DAS SEÇÕES */
+
+.novo-pedido .card h2 {
+  margin: 0 0 24px;
+  color: #1f2428;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* =========================
+   FORMULÁRIO DO CLIENTE
+========================= */
+
+.novo-pedido .form-cliente {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* =========================
+   CAMPOS
+========================= */
+
+.novo-pedido .campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.novo-pedido .campo label {
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.novo-pedido .campo input,
+.novo-pedido .campo select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  padding: 12px 14px;
+  border: 1px solid #d7ddd9;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #1f2428;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.novo-pedido .campo input::placeholder {
+  color: #929b96;
+}
+
+.novo-pedido .campo input:focus,
+.novo-pedido .campo select:focus {
+  border-color: #43b02a;
+  box-shadow: 0 0 0 3px rgba(67, 176, 42, 0.13);
+}
+
+/* =========================
+   FORMULÁRIO DE PRODUTOS
+========================= */
+
+.novo-pedido .form-produto {
+  display: grid;
+  grid-template-columns:
+    minmax(150px, 2fr)
+    minmax(100px, 0.9fr)
+    minmax(110px, 1fr)
+    minmax(130px, 1.2fr)
+    auto;
+  align-items: end;
+  gap: 18px;
+}
+
+/* BOTÃO ADICIONAR PRODUTO */
+
+.novo-pedido .botao-adicionar {
+  min-height: 46px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #43b02a;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.novo-pedido .botao-adicionar:hover {
+  background-color: #36951f;
+}
+
+.novo-pedido .botao-adicionar:active {
+  transform: translateY(1px);
+}
+
+/* =========================
+   LISTA DE PRODUTOS
+========================= */
+
+.novo-pedido .lista-produtos {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid #e4e8e5;
+}
+
+.novo-pedido .lista-produtos h3 {
+  margin: 0 0 16px;
+  color: #1f2428;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.novo-pedido .lista-produtos p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.novo-pedido .lista-produtos ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.novo-pedido .lista-produtos li {
+  padding: 16px;
+  border: 1px solid #e4e8e5;
+  border-radius: 8px;
+  background-color: #f8faf9;
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.novo-pedido .lista-produtos li:hover {
+  border-color: #b9dcb1;
+  background-color: #f5faf3;
+}
+
+.novo-pedido .lista-produtos li strong {
+  color: #1f2428;
+  font-weight: 700;
+}
+
+/* =========================
+   ÁREA DE CRIAÇÃO DO PEDIDO
+========================= */
+
+.novo-pedido .acoes-pedido {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 8px 0 24px;
+}
+
+.novo-pedido .botao-criar-pedido {
+  min-height: 48px;
+  padding: 0 28px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1f7a24;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.novo-pedido .botao-criar-pedido:hover {
+  background-color: #17631c;
+}
+
+.novo-pedido .botao-criar-pedido:active {
+  transform: translateY(1px);
+}
+
+/* FOCO PARA NAVEGAÇÃO PELO TECLADO */
+
+.novo-pedido .botao-adicionar:focus-visible,
+.novo-pedido .botao-criar-pedido:focus-visible {
+  outline: 3px solid rgba(67, 176, 42, 0.35);
+  outline-offset: 3px;
+}
+
+/* =========================
+   TELAS MÉDIAS E TABLETS
+========================= */
+
+@media (max-width: 1100px) {
+  .novo-pedido .form-produto {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .novo-pedido .botao-adicionar {
+    width: 100%;
+  }
+}
+
+/* =========================
+   CELULARES
+========================= */
+
+@media (max-width: 768px) {
+  .novo-pedido {
+    padding: 20px;
+  }
+
+  .novo-pedido > h1 {
+    margin-bottom: 22px;
+    font-size: 26px;
+  }
+
+  .novo-pedido .card {
+    padding: 22px;
+  }
+
+  .novo-pedido .form-cliente,
+  .novo-pedido .form-produto {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .novo-pedido .acoes-pedido {
+    justify-content: stretch;
+  }
+
+  .novo-pedido .botao-criar-pedido {
+    width: 100%;
+  }
+}
+
+/* =========================
+   CELULARES PEQUENOS
+========================= */
+
+@media (max-width: 480px) {
+  .novo-pedido {
+    padding: 14px;
+  }
+
+  .novo-pedido > h1 {
+    font-size: 23px;
+  }
+
+  .novo-pedido .card {
+    padding: 17px;
+    border-radius: 10px;
+  }
+
+  .novo-pedido .card h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .novo-pedido .campo input,
+  .novo-pedido .campo select {
+    min-height: 44px;
+    padding: 11px 12px;
+    font-size: 14px;
+  }
+
+  .novo-pedido .lista-produtos li {
+    padding: 12px;
+  }
+
+  .novo-pedido .botao-adicionar,
+  .novo-pedido .botao-criar-pedido {
+    width: 100%;
+    min-height: 46px;
+    white-space: normal;
+  }
+}
